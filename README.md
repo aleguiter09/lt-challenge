@@ -67,3 +67,15 @@ Este proyecto incluye un workflow de GitHub Actions:
 - Asegura que la rama main siempre sea estable.
 
 Archivo: `.github/workflows/ci.yml`
+
+## 💡 Posibles mejoras a futuro
+
+Estas features no fueron requeridas en el challenge, pero podrían añadirse para enriquecer la aplicación:
+
+- Persistencia de datos: guardar en localStorage o en una API real para no perder los ítems al refrescar.
+- Accesibilidad.
+- Dark mode.
+- Internacionalización con i18n.
+- Pruebas E2E con Playwright.
+- Drag & drop para quitar items de la lista o reodernarlos.
+- Reglas en branches: Evitar push a main, garantizar revisión de codigo de un compañero de equipo en los PR, solicitar minimo coverage (vitest config).
