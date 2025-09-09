@@ -1,13 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import {
-  ListProvider,
-  type ListState,
-  type ListAction,
-} from "@/context/ListProvider";
+import { ListProvider, type ListState } from "@/context/ListProvider";
 
-// Mock del contexto useList
 const mockListContext = {
   Provider: vi.fn(({ children, value }) => (
     <div data-testid="list-context-provider" data-value={JSON.stringify(value)}>
@@ -20,7 +15,6 @@ vi.mock("./useList", () => ({
   ListContext: mockListContext,
 }));
 
-// Mock de React hooks
 const mockDispatch = vi.fn();
 const mockState: ListState = {
   items: ["Item 1", "Item 2", "Item 3", "Item 4"],
@@ -54,19 +48,19 @@ describe("ListProvider", () => {
 });
 
 describe("Reducer", () => {
-  let reducer: (state: ListState, action: ListAction) => ListState;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let reducer: any;
 
   beforeEach(async () => {
-    // Importar el módulo completo para acceder al reducer
     const module = await import("@/context/ListProvider");
     const React = await import("react");
-    // El reducer no está exportado, pero podemos testearlo a través de useReducer
     render(
       <module.ListProvider>
         <div />
       </module.ListProvider>
     );
-    reducer = vi.mocked(React.useReducer).mock.calls[0][0]; // Obtener la función reducer
+
+    reducer = vi.mocked(React.useReducer).mock.calls[0][0];
   });
 
   it("should add item", () => {
