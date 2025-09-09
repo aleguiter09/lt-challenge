@@ -32,7 +32,7 @@ export const Modal = ({
               if (value.trim()) {
                 dispatch({ type: "ADD_ITEM", payload: value.trim() });
                 setValue("");
-                close();
+                setIsOpen(false);
               }
             }}
           >
