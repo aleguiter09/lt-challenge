@@ -1,0 +1,11 @@
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .primary-controls {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+  }
+}

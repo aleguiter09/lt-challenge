@@ -1,0 +1,27 @@
+.list {
+  border: 1px solid #cccccc;
+  background-color: #f7f7f7;
+  padding: 13px 11px;
+  height: 227px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+  list-style: none;
+
+  li {
+    button {
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      width: 100%;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    &.selected {
+      background: #324bff;
+
+      button {
+        color: white;
+      }
+    }
+  }
+}
