@@ -79,3 +79,4 @@ Estas features no fueron requeridas en el challenge, pero podrían añadirse par
 - Pruebas E2E con Playwright.
 - Drag & drop para quitar items de la lista o reodernarlos.
 - Reglas en branches: Evitar push a main, garantizar revisión de codigo de un compañero de equipo en los PR, solicitar minimo coverage (vitest config).
+- Utilizar tecnologias como Husky para correr test & build previo a commits.
