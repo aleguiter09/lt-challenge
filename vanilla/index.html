@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Challenge - Logitravel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">This is a technical proof</h1>
+      <p class="description regular">
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit mus primis nec
+        inceptos. Lacinia habitasse arcu molestie maecenas cursus quam nunc,
+        hendrerit posuere augue fames dictumst placerat porttitor, dis mi
+        pharetra vestibulum venenatis phasellus.
+      </p>
+
+      <ul id="list" class="list"></ul>
+
+      <div class="controls">
+        <div class="primary-controls">
+          <button id="undoBtn" class="btn medium">⟲</button>
+          <button id="deleteBtn" class="btn medium">Delete</button>
+        </div>
+        <button id="addBtn" class="btn primary medium">Add</button>
+      </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <label class="regular" for="modalInput">Add item to list</label>
+        <input
+          class="modal-input regular"
+          id="modalInput"
+          type="text"
+          placeholder="Type the text here..."
+        />
+        <div class="modal-actions">
+          <button id="modalAdd" class="btn primary medium">Add</button>
+          <button id="modalCancel" class="btn medium">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
