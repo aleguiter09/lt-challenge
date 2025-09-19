@@ -23,7 +23,10 @@ describe("List", () => {
 
     const item = screen.getByText("Item 1");
     fireEvent.click(item);
-    expect(item.parentElement).toHaveClass("selected");
+
+    const li = screen.getByText("Item 1").closest("li");
+
+    expect(li).toHaveClass("selected");
   });
 
   it("calls dispatch with REMOVE_ITEM when item is double clicked", () => {
