@@ -8,7 +8,7 @@ export const List = () => {
     <ul id="list" className="list">
       {state.items.map((item, index) => (
         <li
-          key={item}
+          key={item + index + new Date().getTime()} // Idealmente la key seria un ID único relacionado al item o generado con una libreria como UUID.
           className={state.selected.includes(index) ? " selected" : ""}
         >
           <button
